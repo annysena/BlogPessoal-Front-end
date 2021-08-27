@@ -1,5 +1,5 @@
 #img-bg{
-    background-image: url('https://i.imgur.com/1r7KmtB.jpg');
+    background-image: url('https://i.imgur.com/mJjvDxv.jpg');
     /*nome da imagem não pode ter espaço*/
 
     height: 100vh; /*possui esse tamanho mínimo, para que ela se estende junto com a tela, ou seja, não possui tamanho fixo */
@@ -7,5 +7,5 @@
     
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
