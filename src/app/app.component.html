@@ -1,4 +1,4 @@
 
-<app-menu *ngIf= 'auth.logado()'></app-menu>
+<app-menu *ngIf= 'auth.logado()'></app-menu> <!--*ngIf -> sempre vai retornar true ou false-->
 <router-outlet></router-outlet> <!--(SÃO ROTAS DINÂMICAS) é um tipo de roteador, ou seja, rotas que leva ao componente que foi digitado na barra de navegação. ex (/cadastrar ou /entrar.-->
 <app-rodape *ngIf= 'auth.logado()'></app-rodape>
