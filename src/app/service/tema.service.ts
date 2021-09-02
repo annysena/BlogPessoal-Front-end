@@ -15,16 +15,25 @@ export class TemaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-//entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
-  //return this.http.post<UsuarioLogin>('https://blogannybe.herokuapp.com/usuarios/logar', usuarioLogin)
-//}
 
 getAllTema(): Observable<Tema[]>{
   return this.http.get<Tema[]>('https://blogannybe.herokuapp.com/temas', this.token)
 }
 
+getByIdTema(id: number): Observable<Tema> {
+  return this.http.get<Tema>(`https://blogannybe.herokuapp.com/temas/${id}`, this.token)
+}
+
 postTema(tema: Tema): Observable<Tema> {
   return this.http.post<Tema>('https://blogannybe.herokuapp.com/temas', tema, this.token)
+}
+
+putTema(tema: Tema): Observable<Tema>{
+  return this.http.put<Tema>('https://blogannybe.herokuapp.com/temas', tema, this.token)
+}
+
+deleteTema(id: number) {
+  return this.http.delete(`https://blogannybe.herokuapp.com/temas/${id}`, this.token)
 }
 
 }
