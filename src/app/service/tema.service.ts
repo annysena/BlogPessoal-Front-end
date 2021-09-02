@@ -19,7 +19,7 @@ export class TemaService {
   //return this.http.post<UsuarioLogin>('https://blogannybe.herokuapp.com/usuarios/logar', usuarioLogin)
 //}
 
-gerAllTema(): Observable<Tema[]>{
+getAllTema(): Observable<Tema[]>{
   return this.http.get<Tema[]>('https://blogannybe.herokuapp.com/temas', this.token)
 }
 
