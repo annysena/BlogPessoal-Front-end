@@ -35,6 +35,8 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(){
 
+    window.scroll(0,0)
+
     if(environment.token == '') {
       this.router.navigate(['/entrar'])
     }
@@ -49,7 +51,7 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  findByIdTema(id: number) {
+  findByIdTema() {
     this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp
     })
